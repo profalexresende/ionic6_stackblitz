@@ -1,11 +1,23 @@
 <ion-app>
   <ion-content>
     
-    <ion-item>
-    <ion-label position="floating">Floating Label</ion-label>
-    <ion-input></ion-input>
-  </ion-item>
+  <h1 align="center">Calculadora Ionic</h1>
+    
+      <ion-item >
+        <ion-label position="floating" >Primeiro número</ion-label>
+        <ion-input type="text" value="0" [(ngModel)]="num1" ></ion-input>
+      </ion-item>
+ 
+      <ion-item >
+        <ion-label position="floating" >Segundo número:</ion-label>
+        <ion-input type="text" value="0" [(ngModel)]="num2" ></ion-input>
+      </ion-item>
+ 
 
-  <ion-button (click)="exibirToast()">Meu alerta</ion-button>
+  <ion-button expand="full" (click)="somar()">Somar</ion-button>
+
+ 
+  <ion-input type="text" readonly value={{resultado}}></ion-input>
+
   </ion-content>
 </ion-app>

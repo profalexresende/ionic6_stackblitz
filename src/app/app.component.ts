@@ -11,6 +11,9 @@ export class AppComponent {
 
 constructor(public toast: ToastController){}
 
+resultado: Number;
+  num1: string ;
+  num2: string;
 
   async exibirToast() {
     const toast = await this.toast.create({
@@ -19,6 +22,11 @@ constructor(public toast: ToastController){}
       color:"danger"
     });
     toast.present();
+  }
+
+  somar(){
+    this.resultado=parseFloat(this.num1)+parseFloat(this.num2);
+
   }
 
 }
